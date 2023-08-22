@@ -7,15 +7,44 @@ int main() {
 
 2. 
 void write_triangle(int n) {
-  for (int count = 0; count < n; count++) {
-    for (int count1 = 0; count1 < count; count1++) {
+  int count;
+  for (count = 0; count < n; count++) {
+    int count1;
+    for (count1 = 0; count1 < count; count1++) {
       write(1, "*", 1);
     }  
-    write(2, "/n", 1);
+    write(2, "\n", 1);
   }
 }
 
 3.
+
+#include <unistd.h>
+#include <fcntl.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+int main() {
+  mode_t mode = S_IRUSR | S_IWUSR
+  int fildes = open("hello_world.txt" , O_CREAT | O_TRUNC | O_RDWR, mode)
+  write(fildes, "Hi! My name is Aarya", 20);
+  close(fildes);
+}
+
+4. 
+
+int main(){
+	mode_t mode = S_IRUSR | S_IWUSR;
+	int fildes = open("hello_world.txt", O_CREAT | O_TRUNC | O_RDWR, mode);
+	dprintf(3, "Hi! My name is Aarya");
+	close(fildes);
+}
+
+5. 
+write() writes into the file itself, while printf() only writes to the console and does not write into the file. Also, printf()
+lets you change how the output is seen, while write() does not.
+
+
+
    
 
 
