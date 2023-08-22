@@ -1,1 +1,21 @@
-1. main
+1. 
+#include <unistd.h>
+int main() {
+  write(1, "Hi! My name is Aarya", 20);
+  return 0;
+}
+
+2. 
+void write_triangle(int n) {
+  for (int count = 0; count < n; count++) {
+    for (int count1 = 0; count1 < count; count1++) {
+      write(1, "*", 1);
+    }  
+    write(2, "/n", 1);
+  }
+}
+
+3.
+   
+
+
