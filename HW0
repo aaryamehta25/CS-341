@@ -51,7 +51,13 @@ CHAPTER 2
 1. There at at least 8 bits in one byte
 2. char is one byte
 3. int: 4, double: 8, float: 4, long: 4, long long: 8
-4. 
+4. 0x7fbd9d48
+5. data[3] is the same as data+3
+6. Because the string "hello" is a constant and can only be read, not written
+7. 12
+8. 5
+9. sizeof("hi")
+10. sizeof(4)
 
    
 
