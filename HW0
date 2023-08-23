@@ -1,3 +1,5 @@
+CHAPTER 1
+
 1. 
 #include <unistd.h>
 int main() {
@@ -44,6 +46,12 @@ write() writes into the file itself, while printf() only writes to the console a
 lets you change how the output is seen, while write() does not.
 
 
+CHAPTER 2
+
+1. There at at least 8 bits in one byte
+2. char is one byte
+3. int: 4, double: 8, float: 4, long: 4, long long: 8
+4. 
 
    
 
