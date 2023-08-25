@@ -59,6 +59,22 @@ CHAPTER 2
 9. sizeof("hi")
 10. sizeof(4)
 
+CHAPTER 3
+1. One way is to iterate through and the other way is to use argc to get the length
+2. argv[0] represents the execution name of the program ex. ./program
+3. They are stored on the stack
+4. sizeof(ptr) is 5 because it is the number of bytes to actually hold the character pointer
+    and sizeof(array) is 6 because it is the total size that is required to hold the array
+5. the function the variable is in manages the lifetime of automatic variables
+
+CHAPTER 4
+
+
+
+CHAPTER 5
+1. putchar(), puts()
+2. The problem with gets() is that there is no way to tell it not to accept input that is too long for it, it can skew the output
+3.
    
 
 
