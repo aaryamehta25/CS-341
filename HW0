@@ -74,7 +74,12 @@ CHAPTER 4
 CHAPTER 5
 1. putchar(), puts()
 2. The problem with gets() is that there is no way to tell it not to accept input that is too long for it, it can skew the output
-3.
+3. 
+char* data = "Hello 5 World"
+char hello, world;
+int five;
+sscanf(data, "%s %s %d", hello, &five, world)
+4. #define _GNU_SOURCE
    
 
 
