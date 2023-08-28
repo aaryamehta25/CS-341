@@ -99,7 +99,20 @@ free(ptr1);
 free(ptr2);
 return 0;
 
-12. 
+12.
+person_t* person_create(char* akey, char* avalue) {
+ printf("Creating link %s -> %s", akey, avalue);
+ result -> key = akey;
+ result-> value = avalue;
+ return result;
+}
+
+void person_destroy(person_t *p) {
+ free(p->key);
+ free(p->value);
+ memset(p, 0, sizeof(person_t));
+ free(p);
+}
 
 
 CHAPTER 5
@@ -123,6 +136,20 @@ int main() {
  printf("%d %s\n", result, buffer);
  free(buffer);
  return EXIT_SUCCESS;
+
+C DEVELOPMENT
+1. the flag -g is used
+2. make could not understand that it has to recreate the source files 
+3. tabs
+4. git commit keep track of new changes and each commit has the identifier that is sha
+5. git log shows you the changes in the order they were committed
+6. git status shows the current state of your work and what has been committed vs not. The .giti
+gnore file has files that Git should not take into consideration when it displays changes
+7. git push lets you actually put in the commits from a branch to the respository, git commit only 
+changes things locally, while git push actually pushes the commits to the repository.
+8. It means that your local commits are not in the same state as the repository. In order to deal
+with this, you can fetch changes, merge, resolve conflicts, and push again. 
+
    
 
 
