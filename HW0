@@ -68,7 +68,38 @@ CHAPTER 3
 5. the function the variable is in manages the lifetime of automatic variables
 
 CHAPTER 4
+1. You can add a static variable outside of the function to change lifetime or you can use malloc()
+2. heap using dynamic memory allocation while the stack if stored locally and is stored in the method of execution.
+3. There is static memory in the process
+4. In a good C program, for every malloc, there is a free()
+5. it would fail if the program uses up all of the heap memory
+6. ctime turns the time value into a character point, while time() just returns the value
+7. When you use free twice, you can confused the heap because you are trying to free something 
+you don't have access to since you already freed it once
+8. You are trying to print something that you do not have access to since you already freed it
+9. once you free it, set that pointer to NULL
+10.
+struct Person {
+ int age;
+ char* name;
+ struct Person* friends[];
+}
 
+11. 
+typedef strcut Person person_t;
+person_t* ptr1 = (person_t*) malloc(sizeof(person_t));
+person_t* ptr2 = (person_t*) malloc(sizeof(person_t));
+ptr1->age = 128;
+ptr2->age = 256;
+ptr1->name = "Agent Smith";
+ptr2->name = "Sonny Moore";
+ptr1->next = ptr2;
+ptr2->next = NULL;
+free(ptr1);
+free(ptr2);
+return 0;
+
+12. 
 
 
 CHAPTER 5
@@ -80,6 +111,18 @@ char hello, world;
 int five;
 sscanf(data, "%s %s %d", hello, &five, world)
 4. #define _GNU_SOURCE
+5. 
+int main() {
+ file_t* file = fopen("file.csv")
+ char* buffer = NULL;
+ size_t capacity = 0;
+ ssize_t result = getline(&buffer, &capacity, &file)
+ if(result > 0 && biffer[result-1] == "\n") {
+	buffer[result-1] = 0;
+}
+ printf("%d %s\n", result, buffer);
+ free(buffer);
+ return EXIT_SUCCESS;
    
 
 
